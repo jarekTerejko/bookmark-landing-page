@@ -84,8 +84,9 @@ a {
 }
 
 .heading-secondary {
-  font-size: 3rem;
+  font-size: 3.2rem;
   margin-bottom: 2rem;
+  font-weight: 500;
 }
 
 .navbar {
@@ -208,4 +209,157 @@ a {
     top: 0;
     left: 0;
   }
+}
+
+.extensions{
+  padding: 5rem 0;
+  text-align: center;
+
+  &__description{
+    max-width: 54rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6rem;
+  }
+
+  &__cards{
+    margin: 0 auto;
+    max-width: 92rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    column-gap: 3rem;
+
+  }
+
+  &__card{
+    height: 36rem;
+    background: url(/images/bg-dots.svg);
+    background-position-y: 260px;
+    background-repeat: repeat-x;
+
+    box-shadow: 0 14px 20px rgba(0, 0, 0, 0.1);
+    padding: 4rem 2rem 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    
+    &:nth-child(2){
+      margin-top: 4rem;
+    }
+    &:nth-child(3){
+      margin-top: 8rem;
+    }
+
+  }
+
+  &__browser-logo{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 4rem;
+  }
+
+  &__card-heading{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  &__card-description{
+    display: inline-block;
+    color: $GrayishBlue;
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .main-btn{
+    width: 100%;
+    text-transform: capitalize;
+  }
+}
+
+.faq{
+
+  padding: 5rem 0;
+  text-align: center;
+  margin-bottom: 10rem;
+
+  .heading-secondary{
+    text-align: center;
+    
+  }
+
+  &__description{
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+  }
+
+  
+
+  &__questions{
+    max-width: 55rem;
+    margin: 0 auto;
+    list-style: none;
+    margin-bottom: 5rem;
+    text-align: left;
+  }
+
+  &__faq-item{
+    border-top: 2px solid #f7f7f7;
+
+    &:last-child{
+      border-bottom: 2px solid #f7f7f7;
+
+    }
+    
+  }
+
+  &__question-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 2rem 0;
+    cursor: pointer;
+
+
+    &:hover .faq__question{
+      color: $SoftRed;
+    }
+  }
+
+  &__question{
+    flex-grow: 1;
+    transition: color .3s ease-out;
+  }
+
+  &__angle-down{
+    color: $SoftBlue;
+    font-size: 3rem;
+    flex-grow: 0;
+    transition: .3s ease-out;
+
+    &.rotated{
+      transform: rotate(180deg);
+      color: $SoftRed;
+    }
+  }
+
+  &__answer-container{
+    transition: .3s ease-out;
+
+    &.inactive{
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+    &.active{
+      height: auto;
+      opacity: 1;
+    }
+  }
+
+  .main-btn{
+    text-transform: capitalize;
+}
+  
 }

@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     ></script>
   <link rel="stylesheet" href="style.css">
-  
+  <!-- <script defer src="script.js"></script> -->
   <title>Frontend Mentor | Bookmark landing page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -70,7 +70,89 @@
   </div>
 </header>
 <!-- header end -->
-
+<!-- section extensions -->
+<section class="extensions">
+  <div class="container">
+    <h3 class="heading-secondary">Download the extension</h3>
+  <p class="extensions__description text-description">We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+    got a favourite you’d like us to prioritize.</p>
+    <div class="extensions__cards">
+      <div class="extensions__card">
+        <img src="images/logo-chrome.svg" alt="chrome logo" class="extensions__browser-logo">
+        <h4 class="extensions__card-heading">  Add to Chrome
+        </h4>
+        <span class="extensions__card-description">Minimum version 62</span>
+        <a href="#" class="main-btn">Add & install extension</a>
+      </div>
+      <div class="extensions__card">
+        <img src="images/logo-firefox.svg" alt="firefox logo" class="extensions__browser-logo">
+        <h4 class="extensions__card-heading">  Add to Firefox
+        </h4>
+        <span class="extensions__card-description">Minimum version 55</span>
+        <a href="#" class="main-btn">Add & install extension</a>
+      </div>
+      <div class="extensions__card">
+        <img src="images/logo-opera.svg" alt="opera logo" class="extensions__browser-logo">
+        <h4 class="extensions__card-heading">  Add to Opera
+        </h4>
+        <span class="extensions__card-description">Minimum version 46</span>
+        <a href="#" class="main-btn">Add & install extension</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- section extensions end -->
+<!-- section FAQ -->
+<section class="faq">
+  <div class="container">
+  <h3 class="heading-secondary">Frequently Asked Questions</h3>
+  <p class="faq__description text-description">Here are some of our FAQs. If you have any other questions you’d like 
+    answered please feel free to email us.</p>
+    <ul class="faq__questions">
+      <li class="faq__faq-item">
+        <div class="faq__question-container">
+          <span class="faq__question">What is Bookmark?</span><i class="fas fa-angle-down faq__angle-down"></i>
+        </div>
+        <div class="faq__answer-container">
+          <p class="faq__answer text-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+            justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+        </div>
+      </li>
+      <li class="faq__faq-item">
+        <div class="faq__question-container">
+          <span class="faq__question">How can I request a new browser?</span><i class="fas fa-angle-down faq__angle-down"></i>
+        </div>
+        <div class="faq__answer-container">
+          <p class="faq__answer text-description">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+        </div>
+      </li>
+      <li class="faq__faq-item">
+        <div class="faq__question-container">
+          <span class="faq__question">Is there a mobile app?</span><i class="fas fa-angle-down faq__angle-down"></i>
+        </div>
+        <div class="faq__answer-container">
+          <p class="faq__answer text-description">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+            sollicitudin ex et ultricies bibendum.</p>
+        </div>
+      </li>
+      <li class="faq__faq-item">
+        <div class="faq__question-container">
+          <span class="faq__question">What about other Chromium browsers?</span><i class="fas fa-angle-down faq__angle-down"></i>
+        </div>
+        <div class="faq__answer-container">
+          <p class="faq__answer text-description">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+            vitae neque eget nisl gravida pellentesque non ut velit.</p>
+        </div>
+      </li>
+    </ul>
+    <a href="" class="main-btn">More info</a>
+  </div>
+</section>
+<!-- section FAQ end -->
   Features
 
   Our aim is to make it quick and easy for you to access your favourite websites. 
@@ -118,10 +200,9 @@
   Minimum version 46
   Add & Install Extension
 
-  Frequently Asked Questions
   
-  Here are some of our FAQs. If you have any other questions you’d like 
-  answered please feel free to email us.
+  
+  
 
   <!-- Question 1 -->
   What is Bookmark?
@@ -172,5 +253,6 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
