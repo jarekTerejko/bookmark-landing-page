@@ -363,3 +363,73 @@ a {
 }
   
 }
+
+.footer{
+  background: $VeryDarkBlue;
+  padding: 2.5rem 0;
+  position: relative;
+  
+  &__content{
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__site-link{
+    height: 2.5rem;
+  }
+
+  &__nav-list{
+    margin-left: 4rem;
+    display: flex;
+    list-style:none;
+    
+  }
+
+  &__nav-item{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  &__nav-item--social-twitter{
+    position: absolute;
+    right: 0;
+    top: -5px;
+
+    margin-right: 0;
+  }
+
+  &__nav-item--social-facebook{
+    position: absolute;
+    right: 60px;
+    top: -5px;
+  }
+
+  &__nav-link{
+    color: $Bright;
+    transition: color .3s ease-out;
+    padding: 1rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    
+
+    &:hover{
+      color: $SoftRed;
+    }
+
+    
+  }
+
+  .fa-twitter, .fa-facebook-square{
+    font-size: 2.6rem;
+  }
+
+  .attribution{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
