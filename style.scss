@@ -211,27 +211,150 @@ a {
   }
 }
 
-.extensions{
+.features {
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  margin-bottom: 8rem;
+
+  &__description {
+    @extend .extensions__description;
+  }
+
+  &__navigation {
+    margin-bottom: 7rem;
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    max-width: 73rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+    border-bottom: 2px solid $Bright;
+  }
+
+  &__nav-item {
+    flex: 1 1 0;
+  }
+
+  &__btn {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    padding: 1rem;
+    text-transform: capitalize;
+    color: $GrayishBlue;
+    font-family: "Rubik", sans-serif;
+    font-size: 1.8rem;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      color: $SoftRed;
+    }
+  }
+  &__btn.tab-active {
+    color: $VeryDarkBlue;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -20px;
+      height: 3px;
+      background: $SoftRed;
+    }
+  }
+
+  &__tabs {
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  &__tab {
+    display: none;
+    position: relative;
+    min-height: 426px;
+  }
+
+  &__tab#simple-bookmarking {
+    &::before {
+      content: "";
+      position: absolute;
+      right: 640px;
+      bottom: 0;
+      height: 346px;
+      width: 4000px;
+      background: $SoftBlue;
+      z-index: -1;
+      border-top-right-radius: 250px;
+      border-bottom-right-radius: 250px;
+    }
+  }
+  &__tab#speedy-searching,
+  &__tab#easy-sharing {
+    &::before {
+      content: "";
+      position: absolute;
+      right: 710px;
+      bottom: 0;
+      height: 346px;
+      width: 4000px;
+      background: $SoftBlue;
+      z-index: -1;
+      border-top-right-radius: 250px;
+      border-bottom-right-radius: 250px;
+    }
+  }
+
+  &__tab.active-content {
+    display: flex;
+  }
+
+  &__img-container {
+    flex-basis: 50%;
+  }
+
+  &__tab-content {
+    flex: 1 1 0;
+    padding-left: 11rem;
+    text-align: left;
+  }
+
+  .heading-secondary {
+    padding-top: 5rem;
+  }
+
+  &__tab-text {
+    margin-bottom: 3rem;
+  }
+}
+
+.extensions {
   padding: 5rem 0;
   text-align: center;
 
-  &__description{
+  &__description {
     max-width: 54rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 6rem;
   }
 
-  &__cards{
+  &__cards {
     margin: 0 auto;
     max-width: 92rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     column-gap: 3rem;
-
   }
 
-  &__card{
+  &__card {
     height: 36rem;
     background: url(/images/bg-dots.svg);
     background-position-y: 260px;
@@ -241,62 +364,57 @@ a {
     padding: 4rem 2rem 2rem;
     text-align: center;
     border-radius: 1rem;
-    
-    &:nth-child(2){
+
+    &:nth-child(2) {
       margin-top: 4rem;
     }
-    &:nth-child(3){
+    &:nth-child(3) {
       margin-top: 8rem;
     }
-
   }
 
-  &__browser-logo{
+  &__browser-logo {
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 4rem;
   }
 
-  &__card-heading{
+  &__card-heading {
     font-size: 2rem;
     margin-bottom: 1rem;
     font-weight: 500;
   }
 
-  &__card-description{
+  &__card-description {
     display: inline-block;
     color: $GrayishBlue;
     font-size: 1.5rem;
     margin-bottom: 5rem;
   }
 
-  .main-btn{
+  .main-btn {
     width: 100%;
     text-transform: capitalize;
   }
 }
 
-.faq{
-
+.faq {
   padding: 5rem 0;
   text-align: center;
   margin-bottom: 10rem;
 
-  .heading-secondary{
+  .heading-secondary {
     text-align: center;
-    
   }
 
-  &__description{
+  &__description {
     max-width: 50rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5rem;
   }
 
-  
-
-  &__questions{
+  &__questions {
     max-width: 55rem;
     margin: 0 auto;
     list-style: none;
@@ -304,94 +422,89 @@ a {
     text-align: left;
   }
 
-  &__faq-item{
+  &__faq-item {
     border-top: 2px solid #f7f7f7;
 
-    &:last-child{
+    &:last-child {
       border-bottom: 2px solid #f7f7f7;
-
     }
-    
   }
 
-  &__question-container{
+  &__question-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 2rem 2rem 0;
     cursor: pointer;
 
-
-    &:hover .faq__question{
+    &:hover .faq__question {
       color: $SoftRed;
     }
   }
 
-  &__question{
+  &__question {
     flex-grow: 1;
-    transition: color .3s ease-out;
+    transition: color 0.3s ease-out;
   }
 
-  &__angle-down{
+  &__angle-down {
     color: $SoftBlue;
     font-size: 3rem;
     flex-grow: 0;
-    transition: .3s ease-out;
+    transition: 0.3s ease-out;
 
-    &.rotated{
+    &.rotated {
       transform: rotate(180deg);
       color: $SoftRed;
     }
   }
 
-  &__answer-container{
-    transition: .3s ease-out;
+  &__answer-container {
+    transition: 0.3s ease-out;
 
-    &.inactive{
+    &.inactive {
       height: 0;
       overflow: hidden;
       opacity: 0;
     }
-    &.active{
+    &.active {
       height: auto;
       opacity: 1;
     }
   }
 
-  .main-btn{
+  .main-btn {
     text-transform: capitalize;
-}
-  
+  }
 }
 
-.footer{
+.footer {
   background: $VeryDarkBlue;
   padding: 2.5rem 0;
   position: relative;
-  
-  &__content{
+
+  &__content {
     display: flex;
     align-items: center;
     position: relative;
   }
 
-  &__site-link{
+  &__site-link {
     height: 2.5rem;
   }
 
-  &__nav-list{
+  &__nav-list {
     margin-left: 4rem;
     display: flex;
-    list-style:none;
-    
+    list-style: none;
   }
 
-  &__nav-item{
+  &__nav-item {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
   }
 
-  &__nav-item--social-twitter{
+  &__nav-item--social-twitter {
     position: absolute;
     right: 0;
     top: -5px;
@@ -399,34 +512,31 @@ a {
     margin-right: 0;
   }
 
-  &__nav-item--social-facebook{
+  &__nav-item--social-facebook {
     position: absolute;
     right: 60px;
     top: -5px;
   }
 
-  &__nav-link{
+  &__nav-link {
     color: $Bright;
-    transition: color .3s ease-out;
+    transition: color 0.3s ease-out;
     padding: 1rem;
     font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 
-    
-
-    &:hover{
+    &:hover {
       color: $SoftRed;
     }
-
-    
   }
 
-  .fa-twitter, .fa-facebook-square{
+  .fa-twitter,
+  .fa-facebook-square {
     font-size: 2.6rem;
   }
 
-  .attribution{
+  .attribution {
     position: absolute;
     bottom: 0;
     left: 50%;
