@@ -478,6 +478,119 @@ a {
   }
 }
 
+.contact {
+  padding: 7rem 0;
+  background: $SoftBlue;
+
+  &__content {
+    max-width: 45rem;
+    margin: 0 auto;
+    text-align: center;
+    color: $Bright;
+  }
+
+  &__pre-heading {
+    font-weight: 400;
+    letter-spacing: 5px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+  }
+
+  .heading-secondary--contact {
+    margin-bottom: 4rem;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 125px;
+    column-gap: 20px;
+  }
+
+  &__input-container {
+    position: relative;
+  }
+
+  .fa-exclamation-circle {
+    position: absolute;
+    top: 16px;
+    right: 17px;
+    color: $SoftRed;
+    z-index: 1;
+  }
+
+  .fa-exclamation-circle--error {
+    display: none;
+  }
+
+  &__email-label {
+    overflow: hidden;
+    height: 0;
+    display: block;
+  }
+
+  &__email-input {
+    width: 100%;
+    display: block;
+    padding: 1.4rem;
+    border: none;
+    background: $Bright;
+    border-radius: 0.5rem;
+    border: 2px solid $Bright;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+
+    &:focus {
+      outline: none;
+      background: lighten($color: $SoftBlue, $amount: 32);
+    }
+  }
+
+  &__email-input--error {
+    border-color: $SoftRed;
+  }
+
+  .main-btn--red {
+    background: $SoftRed;
+    border-color: $SoftRed;
+    box-shadow: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: "Rubik", sans-serif;
+
+    &:hover {
+      background: $Bright;
+      color: $SoftRed;
+    }
+  }
+
+  &__info-msg {
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 1.1rem 0.8rem 0.8rem;
+    background: $SoftRed;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    font-weight: 500;
+    position: absolute;
+    width: 100%;
+    top: 44px;
+    z-index: 0;
+    display: none;
+  }
+
+  &__info-msg--visible-error {
+    display: block;
+  }
+  &__info-msg--visible-success {
+    display: block;
+    background: transparent;
+  }
+}
+
 .footer {
   background: $VeryDarkBlue;
   padding: 2.5rem 0;
