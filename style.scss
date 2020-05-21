@@ -4,7 +4,7 @@ $SoftBlue: hsl(231, 69%, 60%);
 $SoftRed: hsl(0, 94%, 66%);
 $GrayishBlue: hsl(229, 8%, 60%);
 $VeryDarkBlue: hsl(229, 31%, 21%);
-$Bright: #fafafa;
+$Bright: hsl(0, 0%, 98%);
 
 @mixin m-q($arg) {
   @media screen and (max-width: $arg) {
@@ -66,8 +66,8 @@ a {
 }
 
 .main-btn--ghost {
-  border-color: #f7f7f7;
-  background: #f7f7f7;
+  border-color: hsl(0, 0%, 97%);
+  background: hsl(0, 0%, 97%);
   color: $VeryDarkBlue;
 
   &:hover {
@@ -149,24 +149,10 @@ a {
 }
 
 .header {
-  padding: 3rem 0;
-  padding-bottom: 25rem;
-  margin-bottom: 5rem;
+  padding: 4rem 0 11rem 0;
+  margin-bottom: 1rem;
   position: relative;
   overflow-x: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 170px;
-    height: 346px;
-    width: 530px;
-    background: $SoftBlue;
-    z-index: -1;
-    border-top-left-radius: 250px;
-    border-bottom-left-radius: 250px;
-  }
 
   &__hero {
     display: flex;
@@ -174,7 +160,7 @@ a {
   }
 
   &__hero-text {
-    flex-basis: 50%;
+    flex: 1 1 0;
   }
 
   &__hero-heading {
@@ -197,17 +183,26 @@ a {
   &__hero-img-container {
     position: relative;
     flex-basis: 50%;
-    // margin-left: 10rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 200px;
+      top: 140px;
+      height: 346px;
+      width: 4000px;
+      background: $SoftBlue;
+      z-index: -1;
+      border-top-left-radius: 250px;
+      border-bottom-left-radius: 250px;
+    }
   }
 
   &__hero-img {
-    max-width: 657px;
-    height: auto;
-    // margin-left: 4rem;
-    // width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    top: 30px;
+    left: 60px;
+    transform: scale(1.18);
   }
 }
 
