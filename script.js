@@ -94,3 +94,44 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
   }
 });
+
+const navTrigger = document.querySelector(".navbar__nav-trigger");
+
+const navtriggerInner = navTrigger.children[0];
+
+const logo = document.querySelector(".navbar__site-logo");
+
+const navList = document.querySelector(".navbar__nav-list");
+
+const navLinks = document.querySelectorAll(".navbar__nav-link");
+
+const openNav = () => {
+  navList.classList.add("active-list");
+
+  navtriggerInner.src = "images/icon-close.svg";
+
+  logo.src = "images/logo-bookmark-white.svg";
+};
+const closeNav = () => {
+  navList.classList.remove("active-list");
+
+  navtriggerInner.src = "images/icon-hamburger.svg";
+
+  logo.src = "images/logo-bookmark.svg";
+};
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (navList.classList.contains("active-list")) {
+      closeNav();
+    }
+  });
+});
+
+navTrigger.addEventListener("click", (e) => {
+  if (!navList.classList.contains("active-list")) {
+    openNav();
+  } else {
+    closeNav();
+  }
+});
